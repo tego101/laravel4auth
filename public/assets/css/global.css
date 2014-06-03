@@ -1,0 +1,17 @@
+html, body {
+  background-image: url('/assets/img/dark_leather.png');
+}
+.btn .no-jacket a {
+  text-decoration: none;
+}
+#suspended .panel {
+  background: #FA2A00;
+  border: 1px solid #E53314;
+  color: #FFFFFF;
+}
+#suspended .panel-footer {
+  color: #585858;
+}
+#suspended ul, li{
+  list-style: none;
+}

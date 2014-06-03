@@ -1,0 +1,1 @@
+<a class='login' href='{{ $authUrl }}'>Connect Me!</a>
