@@ -54,13 +54,14 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'triliage',
-			'username'  => 'root',
+			'host'      => getenv('IP'),
+			'database'  => 'c9',
+			'username'  => getenv('C9_USER'),
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
+			'port' => 3306,
 		),
 
 		'pgsql' => array(

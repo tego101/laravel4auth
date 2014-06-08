@@ -6,13 +6,15 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 	public static $rules = array(
 		"register" => array(
-			'phone_number' => 'required|max:10|unique:users',
+		    'company_name' => 'required|unique:users',
+		    'first_name' => 'required|unique:users',
+			'email' => 'required|email|unique:users',
 			'password' => 'required|confirmed|min:6',
 			'password_confirmation' => 'required|min:6',
 			'tos' => 'required|accepted',
 		),
 		"login" => array(
-			'phone_number' => 'required|max:10',
+			'email' => 'required|email',
 			'password' => 'required|min:8'
 		),
 	);

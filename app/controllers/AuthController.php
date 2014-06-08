@@ -45,12 +45,12 @@ class AuthController extends BaseController {
 		if ($val->passes())
 		{
 			#	Email string.
-			$phone_number = Input::get('phone_number');
+			$email = Input::get('email');
 			#	Password string.
 			$password = Input::get('password');
 
 			#	Attempt to login user.
-			if (Auth::attempt(array('phone_number' => $phone_number, 'password' => $password)))
+			if (Auth::attempt(array('email' => $email, 'password' => $password)))
 			{
 				return Redirect::intended('/me')->with('success', User::$messages['login']['success']);
 			}
@@ -81,7 +81,9 @@ class AuthController extends BaseController {
 		{
 			$nuser = new User();
 			$nuser->act_code = mt_rand(5,20).md5(Input::get('email').'1989');
-			$nuser->phone_number = Input::get('phone_number');
+			$nuser->company_name = Input::get('company_name');
+			$nuser->first_name = Input::get('first_name');
+			$nuser->email = Input::get('email');
 			$nuser->password = Hash::make(Input::get('password'));
 
 			if ($nuser->save())

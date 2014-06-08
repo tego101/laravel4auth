@@ -7,9 +7,9 @@
 	  </div><!-- /pane-body -->
 	  <div class="panel-footer">
 		<div class="form-group">
-		  	{{	Form::label('phone_number') }}
-			{{	Form::text('phone_number', null, array('class' => 'form-control', 'placeholder' => '999-888-6666/9995551234', 'autofocus' => true)) }}
-			@if($errors->first('phone_number'))
+		  	{{	Form::label('email') }}
+			{{	Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'you@email.com', 'autofocus' => true)) }}
+			@if($errors->first('email'))
 				<div class="alert alert-warning fade in">
 				    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 				    <strong>{{ $errors->first('email') }}</strong>
@@ -17,7 +17,7 @@
 			@endif			
 		</div>
 		<div class="form-group">
-			{{	Form::label('passcode') }}
+			{{	Form::label('password') }}
 			{{	Form::password('password', array('class' => 'form-control')) }}
 			@if($errors->first('password'))
 				<div class="alert alert-warning fade in">

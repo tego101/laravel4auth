@@ -12,11 +12,17 @@ class Users extends Migration {
 	 */
 	public function up()
 	{
+	    Schema::dropIfExists('users');
+	    
 		Schema::create('users', function($table)
 		{
 		    $table->increments('id');
-		    $table->string('act_code');
+		    $table->string('act_code')->default(null);
 		    $table->integer('group')->default(100);
+		    $table->integer('subid')->default(0);
+		    $table->string('first_name')->default(null);
+		    $table->string('company_name')->default(null);
+		    $table->string('phone_number')->default(null);
 		    $table->string('email')->null(false);
 		    $table->string('password')->null(false);
 		    $table->timestamps();
@@ -31,6 +37,7 @@ class Users extends Migration {
 	public function down()
 	{
 		//
+		Schema::dropIfExists('users');
 	}
 
 }

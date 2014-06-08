@@ -23,6 +23,7 @@
 		<strong>{{ Session::get("warning") }}</strong>
 	</div>	
 @endif
+<!---
 @if (Auth::check() && Auth::user()->group == 100)
 	<div class="alert alert-warning fade in">
 		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -31,5 +32,5 @@
 		<hr>
 		<a href="/activate/resend" class="btn btn-info btn-block"><strong>Resend activation</strong></a>
 	</div>	
-@endif
+@endif --->
 </div>

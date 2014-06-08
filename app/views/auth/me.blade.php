@@ -3,7 +3,7 @@
 	  <div class="panel-body">
 	  <h3 class="text-center">
  
-	  {{ Auth::user()->phone_number }}</h3>
+	  {{ Auth::user()->company_name }}</h3>
 	  <ul class="nav nav-pills">
 	  @if(Auth::user()->group == 1989)
 	  		<li><a href="/admin">Admin Panel</a></li>
